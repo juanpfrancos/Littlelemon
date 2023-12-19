@@ -5,7 +5,7 @@
 <!--Begin col-->
 <div class="column">
     <!-- Step 14: Create for loop -->
-    {% for item in menu %}
+    {% for item in menu|dictsort:"name" %}
     <p>
         <a href="{% url 'menu_item' pk=item.pk %}">
             {{ item.name }}
