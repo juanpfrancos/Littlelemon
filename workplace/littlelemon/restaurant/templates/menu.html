@@ -7,7 +7,9 @@
     <!-- Step 14: Create for loop -->
     {% for item in menu %}
     <p>
-        {{ item.name }}
+        <a href="{% url 'menu_item' pk=item.pk %}">
+            {{ item.name }}
+        </a>
         <span class="menu-price">
         ${{ item.price }}.00
         </span>
